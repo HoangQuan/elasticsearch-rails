@@ -165,3 +165,22 @@ This software is licensed under the Apache 2 license, quoted below.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
+  ### If you can not start elasticsearch server
+  * sudo service elasticsearch start
+  * still can not run because of JAVA missing
+  => java -version
+The program 'java' can be found in the following packages:...
+
+try to run :
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+
+seting up JAVA_HOME part
+
+sudo vi /etc/environment
+insert: JAVA_HOME="/usr/bin/java" (which java to show the path of java)
+source /etc/environment
+done:
+sudo service elasticsearch start
+ * Starting Elasticsearch Server
